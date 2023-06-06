@@ -38,8 +38,11 @@ class Mission
       average_speed: 1500
     )
 
-    rocket.launch? && rocket.launch
-    # TODO: logic displaying rocket/mission status
+    if rocket.launch?
+      rocket.launch do |status|
+        # TODO: logic displaying rocket/mission status
+      end
+    end
     # TODO: logic for updating mission summary
   end
 end
