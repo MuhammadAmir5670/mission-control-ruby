@@ -29,4 +29,10 @@ class Rocket
   def launch
     # TODO: logic for launching a rocket
   end
+
+  private
+
+  def reached_destination?
+    distance_traveled >= distance
+  end
 end
