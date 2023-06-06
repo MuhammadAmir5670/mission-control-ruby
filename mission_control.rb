@@ -14,6 +14,7 @@ class MissionControl
 
   def start
     puts 'Welcome to Mission Control!'
+
     loop do
       break unless run_mission
     end
