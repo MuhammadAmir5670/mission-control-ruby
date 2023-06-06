@@ -25,6 +25,19 @@ class LaunchControl
     true
   end
 
+  def explode?
+    return false if @aborted
+    return @explode unless @explode.nil?
+
+    @explode = rand(2).zero?
+  end
+
+  def rand_launch_iteration(distance, current_speed)
+    total_iterations = (distance / current_speed).ceil
+
+    rand(total_iterations - 1)
+  end
+
   private
 
   def abort_and_retry?
