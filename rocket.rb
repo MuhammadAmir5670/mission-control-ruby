@@ -46,4 +46,8 @@ class Rocket
   def calculate_distance_traveled
     (current_speed * elapsed_time)
   end
+
+  def calculate_total_fuel_burned
+    (burn_rate * elapsed_time) / 60
+  end
 end
