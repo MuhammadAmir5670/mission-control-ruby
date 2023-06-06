@@ -23,8 +23,9 @@ class LaunchControl
   private
 
   def disengage_release_structure?
+    return unless prompt('Release support structures?')
+
     puts 'Support structures released!'
-    # TODO: logic for releasing support structures
     true
   end
 
