@@ -32,14 +32,13 @@ class Mission
   end
 
   def start
-    rocket = Rocket.new(
+    rocket = Rocket.prepare_for_launch(
       distance: 160,
       burn_rate: 168_240,
       average_speed: 1500
     )
 
-    # TODO: logic for preparing a rocket for launch i.e. launch sequence
-    # TODO: logic for launching a rocket
+    rocket.launch? && rocket.launch
     # TODO: logic displaying rocket/mission status
     # TODO: logic for updating mission summary
   end
