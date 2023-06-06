@@ -2,6 +2,9 @@
 
 # TODO: add documentation for class
 class Rocket
+  attr_reader :distance, :burn_rate,
+              :average_speed, :distance_traveled
+
   def initialize(distance, burn_rate, average_speed)
     @launch_control = LaunchControl.new
     @distance = distance
