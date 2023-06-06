@@ -29,9 +29,18 @@ class LaunchControl
   end
 
   def engage_afterburner?
-    puts 'Afterburner engaged!'
-    # TODO: logic for performing afterburner
-    true
+    if prompt('Engage afterburner?')
+      puts 'Afterburner engaged!'
+
+      true
+    else
+      return false unless prompt('Retry?')
+
+      puts 'Safe Abort!'
+
+      @abort_count += 1
+      engage_afterburner?
+    end
   end
 
   def perform_cross_checks?
