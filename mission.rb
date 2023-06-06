@@ -11,4 +11,19 @@ class Mission
     @random_seed = 12
     @summary = {}
   end
+
+  def print_plan
+    puts 'Mission plan:'
+    puts "  Travel distance: #{@travel_distance} km"
+    puts "  Payload capacity: #{@payload_capacity} kg"
+    puts "  Fuel capacity: #{@fuel_capacity} liters"
+    puts "  Burn rate: #{burn_rate} liters/min"
+    puts "  Average speed: #{@average_speed} km/h"
+    puts "  Random seed: #{@random_seed}"
+  end
+
+  def fetch_mission_name
+    print 'What is the name of this mission? '
+    @mission_name = gets.chomp
+  end
 end
