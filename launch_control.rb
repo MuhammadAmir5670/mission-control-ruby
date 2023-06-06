@@ -1,7 +1,10 @@
 # frozen_string_literal: true
+require_relative './mixins/prompt'
 
 # TODO: add documentation for class
 class LaunchControl
+  include Prompt
+
   def initialize
     # TODO: attrs to be decided
   end
