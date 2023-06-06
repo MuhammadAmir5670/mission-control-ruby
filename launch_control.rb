@@ -44,8 +44,9 @@ class LaunchControl
   end
 
   def perform_cross_checks?
+    return unless prompt('Perform cross-checks?')
+
     puts 'Cross-checks performed!'
-    # TODO: logic for performing cross checks
     true
   end
 end
