@@ -17,7 +17,12 @@ class LaunchControl
   end
 
   def launch?
-    # TODO: logic for
+    return if @aborted
+    return unless prompt('Launch?')
+    return false if abort_and_retry? && abort_launch
+
+    puts 'Launched!'
+    true
   end
 
   private
