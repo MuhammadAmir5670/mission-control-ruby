@@ -21,4 +21,12 @@ class Rocket
   def prepare_for_launch
     @launch_control.prepare_for_launch
   end
+
+  def launch?
+    @launch_control.launch?
+  end
+
+  def launch
+    # TODO: logic for launching a rocket
+  end
 end
