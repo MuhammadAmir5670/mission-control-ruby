@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
+require_relative './mixins/prompt'
+
 # TODO: add documentation for class
 class Mission
+  include Prompt
+
   attr_reader :summary
 
   def initialize(travel_distance, payload_capacity, fuel_capacity, burn_rate, average_speed)
