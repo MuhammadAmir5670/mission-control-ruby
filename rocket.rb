@@ -18,7 +18,7 @@ class Rocket
   def self.prepare_for_launch(distance:, burn_rate:, average_speed:)
     rocket = new(distance, burn_rate, average_speed)
 
-    prepare_for_launch
+    rocket.prepare_for_launch
 
     rocket
   end
