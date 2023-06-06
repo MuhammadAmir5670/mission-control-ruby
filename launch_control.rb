@@ -5,8 +5,10 @@ require_relative './mixins/prompt'
 class LaunchControl
   include Prompt
 
+  attr_reader :abort_count
+
   def initialize
-    @aborted = 0
+    @aborted = false
     @abort_count = 0
   end
 
