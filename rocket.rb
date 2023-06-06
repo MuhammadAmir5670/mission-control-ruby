@@ -30,7 +30,23 @@ class Rocket
   end
 
   def launch
-    # TODO: logic for launching a rocket
+    @elapsed_time = 0
+    @distance_traveled = 0
+    @flight_time = Time.now
+
+    until reached_destination?
+      # TODO: Add logic for exploding rocket
+
+      # Update rocket's position, fuel burn, speed, etc.
+      # You can implement the specific logic based on your requirements
+      # Increment the elapsed time and distance traveled
+      @elapsed_time += 1
+      @distance_traveled += calculate_distance_traveled
+
+      yield(status)
+      # Sleep for a second to simulate the passage of time
+      sleep 1
+    end
   end
 
   private
