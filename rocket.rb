@@ -35,4 +35,12 @@ class Rocket
   def reached_destination?
     distance_traveled >= distance
   end
+
+  def calculate_time_to_destination
+    remaining_distance = distance - distance_traveled
+    remaining_time = remaining_distance / average_speed
+
+    remaining_time.ceil
+  end
+
 end
