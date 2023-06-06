@@ -6,6 +6,16 @@ class LaunchControl
     # TODO: attrs to be decided
   end
 
+  def prepare_for_launch
+    return if engage_afterburner? && disengage_release_structure? && perform_cross_checks?
+
+    # TODO: logic for abort launch
+  end
+
+  def launch?
+    # TODO: logic for
+  end
+
   private
 
   def disengage_release_structure?
