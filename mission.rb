@@ -40,9 +40,20 @@ class Mission
 
     if rocket.launch?
       rocket.launch do |status|
-        # TODO: logic displaying rocket/mission status
+        display_mission_status(status)
       end
     end
     # TODO: logic for updating mission summary
+  end
+
+  private
+
+  def display_mission_status(**status)
+    puts 'Mission status:'
+    puts "  Current fuel burn rate: #{status[:current_fuel_burn_rate]} liters/min"
+    puts "  Current speed: #{status[:current_speed]} km/h"
+    puts "  Current distance traveled: #{status[:distance_traveled]} km"
+    puts "  Elapsed time: #{format_time(status[:elapsed_time])}"
+    puts "  Time to destination: #{format_time(status[:time_to_destination])}"
   end
 end
