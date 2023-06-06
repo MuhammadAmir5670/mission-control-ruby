@@ -26,7 +26,7 @@ class MissionControl
   private
 
   def run_mission
-    mission = Missiٍon.new
+    mission = Mission.new
 
     mission.print_plan
     mission.fetch_mission_name
