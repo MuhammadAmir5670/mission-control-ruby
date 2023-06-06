@@ -64,7 +64,7 @@ class Rocket
   private
 
   def explode_iteration
-    @explode_iteration ||= @launch_control.explode? && @launch_control.rand_explode_iteration(distance, current_speed)
+    @explode_iteration ||= @launch_control.explode? && @launch_control.rand_launch_iteration(distance, current_speed)
   end
 
   def flight_time
@@ -85,6 +85,10 @@ class Rocket
 
   def reached_destination?
     distance_traveled >= distance
+  end
+
+  def current_speed
+    average_speed / 60
   end
 
   def calculate_time_to_destination
