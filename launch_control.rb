@@ -13,4 +13,10 @@ class LaunchControl
     # TODO: logic for releasing support structures
     true
   end
+
+  def engage_afterburner?
+    puts 'Afterburner engaged!'
+    # TODO: logic for performing afterburner
+    true
+  end
 end
