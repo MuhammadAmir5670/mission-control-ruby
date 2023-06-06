@@ -19,4 +19,10 @@ class LaunchControl
     # TODO: logic for performing afterburner
     true
   end
+
+  def perform_cross_checks?
+    puts 'Cross-checks performed!'
+    # TODO: logic for performing cross checks
+    true
+  end
 end
