@@ -6,7 +6,8 @@ class LaunchControl
   include Prompt
 
   def initialize
-    # TODO: attrs to be decided
+    @aborted = 0
+    @abort_count = 0
   end
 
   def prepare_for_launch
