@@ -26,4 +26,21 @@ class Mission
     print 'What is the name of this mission? '
     @mission_name = gets.chomp
   end
+
+  def proceed?
+    prompt('Would you like to proceed?')
+  end
+
+  def start
+    rocket = Rocket.new(
+      distance: 160,
+      burn_rate: 168_240,
+      average_speed: 1500
+    )
+
+    # TODO: logic for preparing a rocket for launch i.e. launch sequence
+    # TODO: logic for launching a rocket
+    # TODO: logic displaying rocket/mission status
+    # TODO: logic for updating mission summary
+  end
 end
