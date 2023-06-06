@@ -2,6 +2,8 @@
 
 # TODO: add documentation for class
 class Mission
+  attr_reader :summary
+
   def initialize(travel_distance, payload_capacity, fuel_capacity, burn_rate, average_speed)
     @travel_distance = travel_distance
     @payload_capacity = payload_capacity
@@ -43,7 +45,8 @@ class Mission
         display_mission_status(status)
       end
     end
-    # TODO: logic for updating mission summary
+
+    @summary = rocket.summary
   end
 
   private
