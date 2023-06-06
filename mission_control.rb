@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require_relative './mission'
+require_relative './mixins/prompt'
 
 # TODO: add documentation for class
 class MissionControl
+  include Prompt
+
   def initialize
     @missions = []
   end
@@ -40,8 +43,6 @@ class MissionControl
     @missions << mission
     prompt('Would you like to run another mission?')
   end
-
-  private
 
   def display_mission_summary(summary)
     puts 'Mission summary:'
