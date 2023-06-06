@@ -36,7 +36,7 @@ class Rocket
     @flight_time = Time.now
 
     until reached_destination?
-      # TODO: Add logic for exploding rocket
+      break puts 'Exploded!' if explode_iteration == elapsed_time
 
       # Update rocket's position, fuel burn, speed, etc.
       # You can implement the specific logic based on your requirements
