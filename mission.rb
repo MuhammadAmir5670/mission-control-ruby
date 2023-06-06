@@ -3,7 +3,43 @@
 require_relative './rocket'
 require_relative './mixins/prompt'
 
-# TODO: add documentation for class
+# Mission class represents a space mission with customizable parameters.
+# It allows you to plan and execute a mission with a rocket.
+#
+# Usage:
+#   mission = Mission.new(
+#     travel_distance: 160,
+#     payload_capacity: 500_00,
+#     fuel_capacity: 151_410_0,
+#     burn_rate: 168_233,
+#     average_speed: 1500
+#   )
+#
+#   mission.print_plan
+#   mission.fetch_mission_name
+#   if mission.proceed?
+#     mission.start
+#     mission.summary # retrieve mission summary after completion
+#   end
+#
+# Attributes:
+#   - travel_distance: The distance to be traveled by the rocket (default: 160 km).
+#   - payload_capacity: The maximum payload capacity of the rocket (default: 500_00 kg).
+#   - fuel_capacity: The fuel capacity of the rocket (default: 151_410_0 liters).
+#   - burn_rate: The fuel burn rate of the rocket (default: 168_233 liters/min).
+#   - average_speed: The average speed of the rocket (default: 1500 km/h).
+#
+# Public Methods:
+#   - print_plan: Prints the mission plan with the configured parameters.
+#   - fetch_mission_name: Asks for user input to set the mission name.
+#   - proceed?: Asks for user confirmation to proceed with the mission.
+#   - start: Initiates the rocket launch and displays the mission status.
+#   - summary: Retrieves the summary of the mission after completion.
+#
+# Private Methods:
+#   - display_mission_status: Displays the current status of the mission.
+#   - format_time: Formats the elapsed time into HH:MM:SS format.
+#
 class Mission
   include Prompt
 
